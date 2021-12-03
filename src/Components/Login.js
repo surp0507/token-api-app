@@ -23,9 +23,7 @@ export default function Login() {
 
   const checkValidation = () => {
     dispatch(requestLogin(login));
-    setTimeout(() => {
-      navigate("/");
-    }, 3000);
+    navigate("/");
   };
   return (
     <div>
@@ -50,7 +48,7 @@ export default function Login() {
           />
           <button
             onClick={checkValidation}
-            className="mx-auto btn btn-primary my-2"
+            className=" btn btn-primary my-2 mx-auto"
           >
             Login
           </button>
