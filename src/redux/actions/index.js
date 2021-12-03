@@ -14,9 +14,30 @@ export const setProducts = (products) => {
   };
 };
 
-export const setLogin=(login)=>{
-    return{
-        type:types.SET_LOGIN,
-        login
-    }
-}
+export const setLogin = (login) => {
+  return {
+    type: types.SET_LOGIN,
+    login,
+  };
+};
+
+export const setToken = (token) => {
+  return {
+    type: types.SET_TOKEN,
+    token,
+  };
+};
+
+export const setLocation = (location) => {
+  return {
+    type: types.SET_LOCATION,
+    location,
+  };
+};
+
+export const setFamilies = (families) => {
+  return {
+    type: types.SET_FAMILIES,
+    families,
+  };
+};

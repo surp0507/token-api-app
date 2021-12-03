@@ -17,7 +17,9 @@ export default function Home() {
             <Link to="/products" className="text-white mx-2">
               products
             </Link>
-          </Nav>
+            <Link to="/location" className="text-white mx-2">location</Link>
+            <Link to="/families" className="text-white mx-2">fmailies</Link>
+           </Nav>
         </Container>
       </Navbar>
     </div>

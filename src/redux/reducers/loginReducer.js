@@ -1,25 +1,28 @@
-import { bindActionCreators } from "redux";
 import { SET_LOGIN } from "../constants";
+import { SET_TOKEN } from "../constants/index";
 
-const initialState={
-    login:{
-        emai:"",
-        password:""
-    }
-}
+const initialState = {
+  login: {
+    email: "",
+    password: "",
+  },
+  token: "",
+};
 
-export const loginReducer=(state=initialState,action)=>{
-    switch(action.type){
+export const loginReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case SET_LOGIN:
+      return {
+        ...state,
+        login: action.login,
+      };
+    case SET_TOKEN:
+      return {
+        ...state,
+        token: action.token,
+      };
 
-        case SET_LOGIN:return{
-            ...state,
-            login:{
-                ...state.login,
-                ...action.login
-            }
-        }
-
-        default:return state;
-    }
-}
-
+    default:
+      return state;
+  }
+};

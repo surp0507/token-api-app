@@ -1,5 +1,6 @@
 export const SET_REGISTRATION="SET_REGISTRATION"
-export const SET_EMAIL="SET_EMAIL"
-export const SET_PASSWORD="SET_PASSWORD"
 export const SET_PRODUCTS="SET_PRODUCTS"
 export const SET_LOGIN="SET_LOGIN"
+export const SET_TOKEN="SET_TOKEN"
+export const SET_LOCATION="SET_LOCATION"
+export const SET_FAMILIES="SET_FAMILIES"

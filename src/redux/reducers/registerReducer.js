@@ -12,10 +12,7 @@ export const registerReducer = (state = initialState, action) => {
     case SET_REGISTRATION:
       return {
         ...state,
-        registration: {
-          ...state.registration,
-          ...action.registers,
-        },
+        registration: action.registers,
       };
 
     default:
