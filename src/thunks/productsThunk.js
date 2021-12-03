@@ -7,5 +7,5 @@ const client = axios.create({
 
 export const requestProducts = () => async (dispatch) => {
   const response = await client.post("/products");
-  console.log(response);
+  console.log(response.data);
 };

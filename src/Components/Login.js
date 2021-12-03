@@ -1,16 +1,22 @@
 import React, { useState } from "react";
-
+import { useDispatch } from "react-redux";
+import { requestLogin } from "../thunks/loginThunk";
+import { setLogin } from "../redux/actions";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 export default function Login() {
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
-  const [error, setError] = useState();
+  const login = useSelector((state) => state.loginReducer.login);
+  console.log(login);
+  const token = login.data.access_token;
+  localStorage.setItem("auth", JSON.stringify(token));
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const checkValidation = () => {
-    const { email, password } = this.state;
-    if (!email === "" && !password === "") {
-    } else {
-      setError("email and password must be filled ");
-    }
+    dispatch(requestLogin());
+
+    navigate("/");
   };
   return (
     <div>
@@ -20,19 +26,19 @@ export default function Login() {
           <input
             type="text"
             placeholder="email"
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) => dispatch(setLogin(e.target.value))}
             className="form-control text-center my-2"
           />
-          <span className="text-danger">{error}</span>
+
           <input
             type="password"
             placeholder="password"
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={(e) => dispatch(setLogin(e.target.value))}
             className="form-control text-center my-2"
           />
-          <span className="text-danger">{error}</span> <br />
+
           <button
-            onClick={checkValidation}
+            onClick={() => checkValidation}
             className="mx-auto btn btn-primary my-2"
           >
             Login

@@ -13,3 +13,10 @@ export const setProducts = (products) => {
     products,
   };
 };
+
+export const setLogin=(login)=>{
+    return{
+        type:types.SET_LOGIN,
+        login
+    }
+}
