@@ -21,8 +21,7 @@ export default function Login() {
 
   const checkValidation = () => {
   dispatch(requestLogin(login));
-  localStorage.setItem("auth",token)
-  navigate('/products')
+  navigate('/')
 };
   return (
     <div>

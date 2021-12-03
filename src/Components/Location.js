@@ -28,6 +28,7 @@ export default function Location() {
               <>
                 <tr>
                   <td>{item.id}</td>
+                  <td>{item.name}</td>
                 </tr>
               </>
             ))}

@@ -27,6 +27,7 @@ export default function Products() {
               <>
                 <tr>
                   <td>{item.id}</td>
+                  <td>{item.name}</td>
                 </tr>
               </>
             ))}

@@ -16,8 +16,8 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/registration" element={<Registration />} />
           <Route path="/products" element={<Products />} />
-          <Route patch="/location" element={<Location />} />
-          <Route patch="/families" element={<Families />} />
+          <Route path="/location" element={<Location />} />
+          <Route path="/families" element={<Families />} />
         </Routes>
       </BrowserRouter>
     </div>

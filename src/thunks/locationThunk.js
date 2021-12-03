@@ -9,6 +9,6 @@ console.log(locAuth);
 
 client.defaults.headers.common["Authorization"] = `Bearer ${locAuth}`;
 export const requestLocation = () => async (dispatch) => {
-  const response = await client.post("/locations ");
+  const response = await client.get("/locations ");
   dispatch(setLocation(response.data));
 };

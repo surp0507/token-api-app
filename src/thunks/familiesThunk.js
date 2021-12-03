@@ -10,6 +10,6 @@ console.log(familiAuth);
 client.defaults.headers.common["Authorization"] = `Bearer ${familiAuth}`;
 
 export const requestFamilies = () => async (dispatch) => {
-  const response = await client.post("/families ");
+  const response = await client.get("/families ");
   dispatch(setFamilies(response.data));
 };

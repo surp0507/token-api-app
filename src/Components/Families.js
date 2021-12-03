@@ -1,11 +1,17 @@
 import React from "react";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { requestFamilies } from "../thunks/familiesThunk";
 import { Table } from "react-bootstrap";
 
 export default function Families() {
   const families = useSelector((state) => state.familiesReducer.families);
   const dispatch = useDispatch();
+
+  useEffect(() => {
+dispatch(requestFamilies())
+  
+  }, [])
   return (
     <div>
       <Table striped bordered hover>
@@ -20,6 +26,7 @@ export default function Families() {
             <>
               <tr>
                 <td>{item.id}</td>
+                <td>{item.name}</td>
               </tr>
             </>
           ))}
