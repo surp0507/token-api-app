@@ -5,21 +5,53 @@ import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <div>
-      <Navbar bg="primary" >
+      <Navbar bg="primary" className="py-3">
         <Container>
           <Nav className="me-auto">
-            <Link to="/login" className="text-white mx-3">
-              Login
-            </Link>
-            <Link to="/registration" className="text-white mx-2">
-              Register
-            </Link>
-            <Link to="/products" className="text-white mx-2">
-              products
-            </Link>
-            <Link to="/location" className="text-white mx-2">location</Link>
-            <Link to="/families" className="text-white mx-2">fmailies</Link>
-           </Nav>
+            {localStorage.getItem("auth") ? (
+              <>
+                <Link
+                  to="/products"
+                  className="text-white mx-2 text-decoration-none"
+                >
+                  products
+                </Link>
+                <Link
+                  to="/location"
+                  className="text-white mx-2  text-decoration-none"
+                >
+                  location
+                </Link>
+                <Link
+                  to="/families"
+                  className="text-white mx-2  text-decoration-none"
+                >
+                  fmailies
+                </Link>
+                <Link
+                  to="/login"
+                  className="text-white mx-2  text-decoration-none"
+                >
+                  LogOut
+                </Link>
+              </>
+            ) : (
+              <>
+                <Link
+                  to="/login"
+                  className="text-white mx-3  text-decoration-none"
+                >
+                  Login
+                </Link>
+                <Link
+                  to="/registration"
+                  className="text-white mx-2  text-decoration-none"
+                >
+                  Register
+                </Link>
+              </>
+            )}
+          </Nav>
         </Container>
       </Navbar>
     </div>
