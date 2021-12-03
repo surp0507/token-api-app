@@ -1,16 +1,10 @@
 import { SET_REGISTRATION } from "../constants";
 
 const initialState = {
-    registration:{
-      email:"",
-      password:""
-    }
-  
-
-  
-      
-  
-  
+  registration: {
+    email: "",
+    password: "",
+  },
 };
 
 export const registerReducer = (state = initialState, action) => {
@@ -18,16 +12,13 @@ export const registerReducer = (state = initialState, action) => {
     case SET_REGISTRATION:
       return {
         ...state,
-        registration:{
+        registration: {
           ...state.registration,
-          ...action.registers
-        }
-    
-         }
-
-         default:return state;
-      
+          ...action.registers,
+        },
       };
-   
-      
+
+    default:
+      return state;
   }
+};

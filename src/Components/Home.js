@@ -14,6 +14,9 @@ export default function Home() {
             <Link to="/registration" className="text-white mx-2">
               Register
             </Link>
+            <Link to="/products" className="text-white mx-2">
+              products
+            </Link>
           </Nav>
         </Container>
       </Navbar>
