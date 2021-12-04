@@ -63,3 +63,11 @@ export const setPassError=(passError)=>{
     passError
   }
 }
+
+export const setLimit=(limit)=>{
+  console.log(limit)
+  return{
+    type:types.SET_LIMIT,
+    limit
+  }
+}

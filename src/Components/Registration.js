@@ -48,7 +48,7 @@ export default function Registration() {
       <div>
         <div className="col-sm-4 mx-auto my-4">
           <div className="box border p-2">
-            <h3 className="text-center text-success my-5">Registration </h3>
+            <h3 className="text-center text-info my-5">Registration </h3>
             <div className="input my-5">
               <input
                 type="email"
@@ -74,7 +74,7 @@ export default function Registration() {
             <div className="my-2">
               <Button
                 onClick={handleRegister}
-                className="mx-auto btn btn-success my-2"
+                className="mx-auto btn btn-info text-white my-2"
               >
                 Register
               </Button>

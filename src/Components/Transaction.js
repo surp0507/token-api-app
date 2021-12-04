@@ -13,6 +13,7 @@ export default function Transaction() {
   }, []);
   return (
     <div>
+      <h3 className="text-center">Transaction </h3>
       <Table striped bordered hover>
         <thead>
           <tr>

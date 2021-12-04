@@ -13,6 +13,7 @@ export default function Location() {
   }, []);
   return (
     <div>
+      <h3 className="text-center">Location </h3>
       <Table striped bordered hover>
         <thead>
           <tr>

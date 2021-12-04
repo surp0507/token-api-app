@@ -1,8 +1,7 @@
 import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch,useSelector } from "react-redux";
 import { requestLogin } from "../thunks/loginThunk";
 import { setLogin } from "../redux/actions";
-import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Button from "@restart/ui/esm/Button";
@@ -18,14 +17,20 @@ export default function Login() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+
+  useEffect(() => {
+ 
+    localStorage.setItem("auth", token);
+
+ 
+  }, []);
+
   const handleInput = (e) => {
     dispatch(setLogin({ ...login, [e.target.name]: e.target.value }));
   };
-  useEffect(() => {
-    localStorage.setItem("auth", token);
-  }, []);
 
-  const checkValid = () => {
+
+const checkValid = () => {
     if (!email.includes("@") && password.length < 3) {
       dispatch(setEmailError("Missing  @"));
       dispatch(setPassError("password length sould be more than 3"));
@@ -59,7 +64,6 @@ export default function Login() {
                 type="email"
                 name="email"
                 placeholder="email"
-                value={email}
                 onChange={handleInput}
                 className="form-control text-center"
               />
@@ -70,7 +74,6 @@ export default function Login() {
                 type="password"
                 name="password"
                 placeholder="password"
-                value={password}
                 onChange={handleInput}
                 className="form-control text-center "
               />
