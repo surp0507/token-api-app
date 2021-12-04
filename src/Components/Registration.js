@@ -23,30 +23,36 @@ export default function Registration() {
   return (
     <div>
       <div>
-        <h3 className="text-center text-success my-5">Registration </h3>
-        <div className="col-sm-4 mx-auto my-3">
-          <input
-            type="email"
-            name="email"
-            placeholder="email"
-            value={email}
-            onChange={handleInput}
-            className="form-control text-center my-2"
-          />
-          <input
-            type="password"
-            name="password"
-            value={password}
-            placeholder="password"
-            onChange={handleInput}
-            className="form-control text-center my-2"
-          />
-          <button
-            onClick={checkValidation}
-            className="mx-auto btn btn-success my-2"
-          >
-            Register
-          </button>
+        <div className="col-sm-4 mx-auto my-4">
+          <div className="box border p-2">
+            <h3 className="text-center text-success my-5">Registration </h3>
+            <div className="input my-3">
+              <input
+                type="email"
+                name="email"
+                placeholder="email"
+                value={email}
+                onChange={handleInput}
+                className="form-control text-center"
+              />
+            </div>
+            <div className="input my-3">
+              <input
+                type="password"
+                name="password"
+                value={password}
+                placeholder="password"
+                onChange={handleInput}
+                className="form-control text-center"
+              />
+            </div>
+            <button
+              onClick={checkValidation}
+              className="mx-auto btn btn-success my-2"
+            >
+              Register
+            </button>
+          </div>
         </div>
       </div>
     </div>

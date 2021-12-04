@@ -41,3 +41,11 @@ export const setFamilies = (families) => {
     families,
   };
 };
+
+export const setTransaction = (transaction) =>{
+  return{
+    type:types.SET_TRANSACTION,
+    transaction
+
+  }
+}

@@ -12,27 +12,34 @@ export default function Home() {
               <>
                 <Link
                   to="/products"
-                  className="text-white mx-2 text-decoration-none"
+                  className="text-white mx-5 text-decoration-none"
                 >
-                  products
+                  Products
                 </Link>
                 <Link
                   to="/location"
-                  className="text-white mx-2  text-decoration-none"
+                  className="text-white mx-5  text-decoration-none"
                 >
-                  location
+                  Location
                 </Link>
                 <Link
                   to="/families"
-                  className="text-white mx-2  text-decoration-none"
+                  className="text-white mx-5  text-decoration-none"
                 >
-                  fmailies
+                  Families
                 </Link>
                 <Link
-                  to="/login"
-                  className="text-white mx-2  text-decoration-none"
+                  to="/transaction"
+                  className="text-white mx-5  text-decoration-none"
                 >
-                  LogOut
+                  Tranactionn
+                </Link>
+
+                <Link
+                  to="/login"
+                  className="text-white mx-5  text-decoration-none"
+                >
+                  Log Out
                 </Link>
               </>
             ) : (
@@ -45,7 +52,7 @@ export default function Home() {
                 </Link>
                 <Link
                   to="/registration"
-                  className="text-white mx-2  text-decoration-none"
+                  className="text-white mx-3  text-decoration-none"
                 >
                   Register
                 </Link>

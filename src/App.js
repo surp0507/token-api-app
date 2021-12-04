@@ -7,6 +7,7 @@ import Products from "./Components/Products";
 import Location from "./Components/Location";
 import Families from "./Components/Families";
 import Protected from "./Components/Protected";
+import Transaction from './Components/Transaction';
 function App() {
   return (
     <div className="App">
@@ -18,6 +19,7 @@ function App() {
           <Route path="/products" element={<Protected cmp={Products} />} />
           <Route path="/location" element={<Protected cmp={Location} />} />
           <Route path="/families" element={<Protected cmp={Families} />} />
+          <Route path="/transaction" element={<Protected cmp={Transaction}/>}/>
         </Routes>
       </BrowserRouter>
     </div>

@@ -4,13 +4,15 @@ import productsReducer from "./productsReducer";
 import {loginReducer} from './loginReducer'
 import { locationReducer } from "./locationReducer";
 import { familiesReducer } from "./familiesReducer";
+import { transactionReducer } from "./transactionReducer";
 
 const reducer = combineReducers({
   registerReducer,
   productsReducer,
   loginReducer,
   locationReducer,
-  familiesReducer
+  familiesReducer,
+  transactionReducer
 });
 
 export default reducer;

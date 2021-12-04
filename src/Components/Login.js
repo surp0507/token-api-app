@@ -4,6 +4,7 @@ import { requestLogin } from "../thunks/loginThunk";
 import { setLogin } from "../redux/actions";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import Button from "@restart/ui/esm/Button";
 export default function Login() {
   const login = useSelector((state) => state.loginReducer.login);
   const token = useSelector((state) => state.loginReducer.token);
@@ -28,30 +29,32 @@ export default function Login() {
   return (
     <div>
       <div>
-        <h3 className="text-center text-primary my-5">Login </h3>
-        <div className="col-sm-4 mx-auto my-3">
-          <input
-            type="email"
-            name="email"
-            placeholder="email"
-            value={email}
-            onChange={handleInput}
-            className="form-control text-center my-4"
-          />
-          <input
-            type="password"
-            name="password"
-            placeholder="password"
-            value={password}
-            onChange={handleInput}
-            className="form-control text-center my-3"
-          />
-          <button
-            onClick={checkValidation}
-            className=" btn btn-primary my-2 mx-auto"
-          >
-            Login
-          </button>
+        <div className="col-sm-4 mx-auto my-5 align-item-center">
+          <div className="box border  p-2 ">
+            <h3 className="text-center text-primary my-5">Login </h3>
+            <input
+              type="email"
+              name="email"
+              placeholder="email"
+              value={email}
+              onChange={handleInput}
+              className="form-control text-center my-5"
+            />
+            <input
+              type="password"
+              name="password"
+              placeholder="password"
+              value={password}
+              onChange={handleInput}
+              className="form-control text-center my-3"
+            />
+            <Button
+              onClick={checkValidation}
+              className=" btn btn-primary my-2 mx-auto"
+            >
+              Login
+            </Button>
+          </div>
         </div>
       </div>
     </div>
