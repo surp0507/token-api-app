@@ -33,6 +33,9 @@ export default function Registration() {
   };
 
   const handleRegister = () => {
+    dispatch(setEmailError(""));
+    dispatch(setPassError(""));
+    
     if (checkValid()) {
       alert("you have registered sucessfully");
       dispatch(requestRegistor(register));

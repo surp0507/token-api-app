@@ -39,6 +39,9 @@ export default function Login() {
   };
 
   const handleLogin = () => {
+    dispatch(setEmailError(""));
+    dispatch(setPassError(""));
+    dispatch(setLogin(""))
     if (checkValid()) {
       alert("you have logged in");
       dispatch(requestLogin(login));
