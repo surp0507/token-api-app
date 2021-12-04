@@ -49,3 +49,17 @@ export const setTransaction = (transaction) =>{
 
   }
 }
+
+export const setEmailError=(eError)=>{
+  return{
+    type:types.SET_EMAIL_ERROR,
+    eError
+  }
+}
+
+export const setPassError=(passError)=>{
+  return{
+    type:types.SET_PASSWORD_ERROR,
+    passError
+  }
+}

@@ -7,7 +7,7 @@ export default function Protected(props) {
 
   useEffect(() => {
     if (!localStorage.getItem("auth")) {
-      navigate("/login");
+      navigate("/registration");
     }
   }, []);
   let Cmp = props.cmp;
