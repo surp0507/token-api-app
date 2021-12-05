@@ -42,32 +42,54 @@ export const setFamilies = (families) => {
   };
 };
 
-export const setTransaction = (transaction) =>{
-  return{
-    type:types.SET_TRANSACTION,
-    transaction
+export const setTransaction = (transaction) => {
+  return {
+    type: types.SET_TRANSACTION,
+    transaction,
+  };
+};
 
-  }
-}
+export const setEmailError = (eError) => {
+  return {
+    type: types.SET_EMAIL_ERROR,
+    eError,
+  };
+};
 
-export const setEmailError=(eError)=>{
-  return{
-    type:types.SET_EMAIL_ERROR,
-    eError
-  }
-}
+export const setPassError = (passError) => {
+  return {
+    type: types.SET_PASSWORD_ERROR,
+    passError,
+  };
+};
 
-export const setPassError=(passError)=>{
-  return{
-    type:types.SET_PASSWORD_ERROR,
-    passError
-  }
-}
+export const setProductsFilter = (filter) => {
+  console.log(filter);
+  return {
+    type: types.SET_PRODUCTS_FILTER,
+    filter,
+  };
+};
 
-export const setLimit=(limit)=>{
-  console.log(limit)
-  return{
-    type:types.SET_LIMIT,
-    limit
-  }
-}
+export const setCurrentPage = (currentpage) => {
+  return {
+    type: types.SET_CURRENT_PAGE,
+    currentpage,
+  };
+};
+
+export const setLocationPerPage = (perpage) => {
+  console.log(perpage);
+  console.log(perpage);
+  return {
+    type: types.SET_LOCATION_PER_PAGE,
+    perpage,
+  };
+};
+
+export const setPageNumber = (pagenumber) => {
+  return {
+    type: types.SET_PAGE_NUMBER,
+    pagenumber,
+  };
+};

@@ -8,7 +8,7 @@ const client = axios.create({
 client.defaults.headers.common[
   "Authorization"
 ] = `Bearer ${localStorage.getItem("auth")}`;
-export const requestProducts = () => async (dispatch) => {
+export const requestProducts = (filter) => async (dispatch) => {
   const response = await client.get("/products");
   dispatch(setProducts(response.data));
 };

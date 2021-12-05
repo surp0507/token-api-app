@@ -36,7 +36,7 @@ export default function Home() {
                 </Link>
 
                 <Link
-                  onClick={()=>alert("you have successfully logged out")}
+                  onClick={() => alert("you have successfully logged out")}
                   to="/login"
                   className="text-white mx-5  text-decoration-none"
                 >

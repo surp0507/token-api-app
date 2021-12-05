@@ -1,7 +1,7 @@
 import { SET_LOGIN } from "../constants";
 import { SET_TOKEN } from "../constants/index";
-import {SET_EMAIL_ERROR} from "../constants/index"
-import {SET_PASSWORD_ERROR} from "../constants/index"
+import { SET_EMAIL_ERROR } from "../constants/index";
+import { SET_PASSWORD_ERROR } from "../constants/index";
 
 const initialState = {
   login: {
@@ -9,8 +9,8 @@ const initialState = {
     password: "",
   },
   token: "",
-  emailError:"",
-  passError:""
+  emailError: "",
+  passError: "",
 };
 
 export const loginReducer = (state = initialState, action) => {
@@ -26,18 +26,17 @@ export const loginReducer = (state = initialState, action) => {
         token: action.token,
       };
 
-      case SET_EMAIL_ERROR:return{
+    case SET_EMAIL_ERROR:
+      return {
         ...state,
-        emailError:action.eError
+        emailError: action.eError,
+      };
 
-      }
-
-      case SET_PASSWORD_ERROR:return{
+    case SET_PASSWORD_ERROR:
+      return {
         ...state,
-        passError:action.passError
-      
-      }
-
+        passError: action.passError,
+      };
 
     default:
       return state;

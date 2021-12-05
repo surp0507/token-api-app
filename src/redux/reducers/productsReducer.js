@@ -1,11 +1,11 @@
 import { SET_PRODUCTS } from "../constants";
-import { SET_LIMIT } from "../constants";
+import { SET_CURRENT_PAGE } from "../constants";
+import { SET_LOCATION_PER_PAGE } from "../constants";
 
 const initialState = {
   products: [],
-  limit:5
-
-
+  currentPage: 1,
+  perPage: 4,
 };
 
 const productsReducer = (state = initialState, action) => {
@@ -15,16 +15,17 @@ const productsReducer = (state = initialState, action) => {
         ...state,
         products: action.products,
       };
+    case SET_CURRENT_PAGE:
+      return {
+        ...state,
+        currentPage: action.currentpage,
+      };
 
-      case SET_LIMIT:
-        return {
-          ...state,
-          filter:{
-            ...state.filter,
-            limit: action.limit,
-          }
-        
-        };
+    case SET_LOCATION_PER_PAGE:
+      return {
+        ...state,
+        perPage: action.perpage,
+      };
 
     default:
       return state;
