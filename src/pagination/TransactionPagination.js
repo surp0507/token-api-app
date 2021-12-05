@@ -10,7 +10,7 @@ const TransactionPagination = () => {
   const dispatch = useDispatch();
 
   const pageNumber = [];
-  for (let i = 1; i < Math.ceil(transaction.length / perPage); i++) {
+  for (let i = 1; i <=  Math.ceil(transaction.length / perPage); i++) {
     pageNumber.push(i);
   }
 

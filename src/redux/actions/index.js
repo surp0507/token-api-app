@@ -79,8 +79,6 @@ export const setCurrentPage = (currentpage) => {
 };
 
 export const setLocationPerPage = (perpage) => {
-  console.log(perpage);
-  console.log(perpage);
   return {
     type: types.SET_LOCATION_PER_PAGE,
     perpage,

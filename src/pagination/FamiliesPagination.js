@@ -4,7 +4,6 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 export const FamiliesPagination = () => {
   const families = useSelector((state) => state.familiesReducer.families);
-  console.log(families);
   const perPage = useSelector((state) => state.familiesReducer.perPage);
   const dispatch = useDispatch();
 

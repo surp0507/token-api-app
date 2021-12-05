@@ -27,6 +27,7 @@ export default function Location() {
   return (
     <div>
       <h3 className="text-center">Location </h3>
+      filter:-
       <select
         value={perPage}
         onChange={(e) => handleChange(e)}
